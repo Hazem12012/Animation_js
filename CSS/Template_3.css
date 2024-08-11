@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
 }
+html{
+    scroll-behavior:smooth;
+}
 
 body{
     background: linear-gradient( #200016 , #10001f );
@@ -24,13 +27,13 @@ align-items: center;
 justify-content: space-between;
 margin: 30px;
 }
-header .logo{
+/* header .logo{
     z-index: 100;
     font-size: 30px;
     text-transform: uppercase;
     margin: 10px;
     padding: 30px;
-}
+} */
 
 header ul{
     display: flex;
@@ -51,6 +54,51 @@ header ul li a:hover , .frist_option{
 }
 
 
+/* start button in head */
+/* === removing default button style ===*/
+.button {
+    margin: 0;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* button styling */
+  .button {
+    --border-right: 6px;
+    --text-stroke-color:#fff;
+    --animation-color:#ce67b0;
+    --fs-size: 2em;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: var(--fs-size);
+    font-family: "Arial";
+    position: relative;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+  }
+  /* this is the text, when you hover on button */
+  .hover-text {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--animation-color);
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid var(--animation-color);
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px var(--animation-color);
+  }
+  /* hover */
+  .button:hover .hover-text {
+    width: 100%;
+    /* filter: drop-shadow(1px 1px 1px var(--animation-color)) */
+  }
+/* end button in head */
 
 
 .main{
@@ -83,7 +131,7 @@ header ul li a:hover , .frist_option{
  color: #fff;   
 font-size: 25px;
 text-transform: uppercase ;
-transform: translateY(-140px);
+transform: translateY(-160px);
 }
 
 

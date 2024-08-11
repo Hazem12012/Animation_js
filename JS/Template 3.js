@@ -8,13 +8,15 @@ let Ꝏcode = document.querySelector('.Ꝏcode');
 
 window.onscroll = function(){
 
-    let value = scrollY ;
+    let value = scrollY;
+    console.log(value);
+    
     stars.style.left = value + 'px';
     moon.style.top = value * 3 +'px';
     mountains3.style.top = value * 1.5 +'px';
     mountains4.style.top = value * 1.2 +'px';
     river.style.top = value + 'px';
-    boat.style.top = value + 'px';
+    boat.style.top = value +-35+ 'px';
     boat.style.left = value * 3 + 'px';
     Ꝏcode.style.fontSize = value + 'px';
 
